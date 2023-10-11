@@ -1,4 +1,4 @@
-# Laravel 9 匯入 CSV 檔案
+# Laravel 10 匯入 CSV 檔案
 
 透過建立含有資料的逗號分隔值（CSV）檔案，然後匯入該檔案，即可自動新增資料，並可以變更分隔符號和 .csv 文字檔中使用的分隔符號，以確保匯進作業的運作方式與想要的方式一樣。
 
@@ -16,19 +16,25 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移，並執行資料庫填充（如果要測試的話）。
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
 ```sh
-$ php artisan migrate --seed
+$ php artisan migrate
 ```
-- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
-$ npm install && npm run dev
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
-- 你可以經由 `/` 來進行 CSV 檔案匯入。
+- 你可以經由 `/register` 來進行註冊。
+- 完成註冊後，可以經由 `/login` 來進行登入。
+- 完成登入後，可以經由 `/` 來進行 CSV 檔案匯入。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/CQXvQho.gif)
+![](https://i.imgur.com/f7GI1Yb.gif)
 > 確認第一列資料是否為標題列
