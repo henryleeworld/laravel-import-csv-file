@@ -1,4 +1,4 @@
-# Laravel 11 匯入 CSV 檔案
+# Laravel 12 匯入 CSV 檔案
 
 透過建立含有資料的逗號分隔值（CSV）檔案，然後匯入該檔案，即可自動新增資料，並可以變更分隔符號和 .csv 文字檔中使用的分隔符號，以確保匯進作業的運作方式與想要的方式一樣。
 
@@ -37,5 +37,5 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/U4sgnwF.gif)
+![](https://i.imgur.com/yjLlnpv.gif)
 > 確認第一列資料是否為標題列

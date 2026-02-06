@@ -5,6 +5,7 @@ use App\Http\Controllers\ImportController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+Route::redirect('/', '/login');
 Route::middleware('auth')->group(function () {
     Route::get('/', [ContactController::class, 'index'])->name('contacts.index');
     Route::post('/import_parse', [ImportController::class, 'parseImport'])->name('import_parse');
